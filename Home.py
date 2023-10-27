@@ -32,6 +32,8 @@ def main():
              
     ### Concept & Review Blocks
              
+    Most chapters include Concepts Blocks, wich briefly summarize key concepts that have been introduced in the material. Use them to refresh your memory or make sure you understood the concept. Also, at the end of most pages you find a Review Block. Make sure you understood the concepts listed there before moving on.
+             
     ### Tasks & Assessments
     """)
 
