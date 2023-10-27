@@ -30,7 +30,7 @@ def main():
              
     ### Pages & Chapters
              
-    ### Concep & Review Blocks
+    ### Concept & Review Blocks
              
     ### Tasks & Assessments
     """)
