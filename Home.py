@@ -3,10 +3,9 @@ import streamlit as st
 
 def main():
     """A simple Streamlit app"""
-    st.title("Welcome to Your Interactive Learning Experience")
+    st.title("Simpson’s Paradox: A Counter-Intuitive Statistical Phenomenon")
 
     st.write("""
-    ## Simpson’s Paradox: A Counter-Intuitive Statistical Phenomenon
     Welcome to this interactive learning experience about Simpson’s Paradox - one of the most counter-intuitive phenomena in statistics!
 
     Unfortunately, this paradox is not related to the “The Simpsons”, however, we will visit Springfield for a decision-making case at the end of this course.
@@ -22,7 +21,18 @@ def main():
 
     st.write("""
     ## Let's Get Started!
+             
     Now that you're here, we'll explore the intriguing world of Simpson's Paradox. Prepare to challenge your understanding of statistics and data interpretation!
+             
+    ## How to use this Experience
+             
+    ### Tools
+             
+    ### Pages & Chapters
+             
+    ### Concep & Review Blocks
+             
+    ### Tasks & Assessments
     """)
 
 if __name__ == "__main__":
