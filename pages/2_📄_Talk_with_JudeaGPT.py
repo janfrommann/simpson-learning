@@ -3,10 +3,10 @@ import anthropic
 
 with st.sidebar:
     anthropic_api_key = st.text_input("Anthropic API Key", key="file_qa_api_key", type="password")
-    "If you don't have an API Key, you can go directly to [Claude](https://platform.openai.com/account/api-keys). Just make sure to let Claude know that you are a highschool stuent."
+    "If you don't have an API Key, you can go directly to [Claude](https://claude.ai). Just make sure to let Claude know that you are a highschool student."
 
 
-st.title("📝 Ask the Paper")
+st.title("📝 Ask 🤖Judea")
 uploaded_file = st.file_uploader("Upload the paper from the course material", type=("txt", "md"))
 question = st.text_input(
     "Ask something about the paper 'Understanding Simpson’s Paradox' by Judea Pearl",
