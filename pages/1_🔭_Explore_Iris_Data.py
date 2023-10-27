@@ -18,7 +18,7 @@ def create_plots(sample_sizes):
 
     # For total view
     fig_total = px.scatter(sampled_data, x='sepal width (cm)', y='petal width (cm)', color='species',
-                           labels={'species': 'Species'}, title='Total View')
+                           labels={'species': 'Species'}, title='Aggregate View')
 
     X_total = sampled_data['sepal width (cm)'].values.reshape(-1, 1)
     y_total = sampled_data['petal width (cm)']
@@ -29,7 +29,7 @@ def create_plots(sample_sizes):
 
     # For subcategory view
     fig_subcat = px.scatter(sampled_data, x='sepal width (cm)', y='petal width (cm)', color='species',
-                            labels={'species': 'Species'}, title='Subcategory View')
+                            labels={'species': 'Species'}, title='Disaggregate View')
     for target, species in enumerate(['setosa', 'versicolor', 'virginica']):
         X_sub = sampled_data[sampled_data['species'] == species]['sepal width (cm)'].values.reshape(-1, 1)
         y_sub = sampled_data[sampled_data['species'] == species]['petal width (cm)']
@@ -41,11 +41,11 @@ def create_plots(sample_sizes):
     return fig_total, fig_subcat
 
 # Streamlit app starts here
-st.title('Iris Data Explorer')
+st.title('Iris Flower Data Explorer')
 
 st.write("""
-Explore the Iris dataset with different sample sizes for each species.
-Below you can see two views: The total view with aggregate data and the subcategory view with data divided by species.
+Explore the Iris Flower dataset with different sample sizes for each species.
+Below you can see two views: The total view with aggregate data and the subcategory (disaggregate) view with data divided by the three Iris species.
 """)
 
 # Slider to select sample sizes
