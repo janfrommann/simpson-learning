@@ -28,10 +28,13 @@ user_input = None  # This line is crucial; it initializes 'user_input'
 with st.sidebar:
     st.header("Predefined Prompts")
     prompt_buttons = {
-        "Explain Confounders": "What's the weather like today?",
-        "Tell me about Spurious Correlations": "Tell me the latest news.",
-        "How can I recognise Simpson's Paradox?": "Tell me a joke."
-        # Add more buttons and prompts as needed
+        "Explain Confounders": "Please explain what confounders are, why they can be hidden, and how they relate to Simpsons Paradox. Tailor your explaination to smart high-school students",
+        "Tell me about Spurious Correlations": "Please explain what Spurious Correlations are and how they relate to Simpsons Paradox and hidden confounders. Tailor your explaination to smart high-school students",
+        "How can I recognise Simpson's Paradox?": "Please explain how you can recognise Simpsons Paradox in a given scenario. What should I watch out for? Tailor your explaination to smart high-school students",
+        "What does aggregate and disaggreate view mean?": "Explain the differnces between the aggregate and disaggreate view in the context of Simpsons Paradox. Tailor your explaination to smart high-school students",
+        "Please define causality": "Explain the meaning of causality in the context of Simpsons Paradox. Tailor your explaination to smart high-school students",
+        "How do I decide if I should trust the otal or subgroup view": "In a case of Simpsons Paradox, how do you go about deciding weather the aggregate or disaggregate view is a better representation of the truth? Tailor your explaination to smart high-school students"
+
     }
 
     # Loop over the predefined prompts and create buttons for each in the sidebar
@@ -41,7 +44,7 @@ with st.sidebar:
 
     st.header("Responses")
     response_buttons = {
-        "Give more details": "Can you provide more details?",
+        "Give more details": "Can you provide more details? If possible, give specific examples",
         "Simplify your answer": "That seems complicated. Can you explain it in simpler terms?"
     }
 

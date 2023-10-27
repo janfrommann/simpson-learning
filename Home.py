@@ -30,7 +30,7 @@ def main():
              
     This experience included one interactive data tool and two distinct LLM chatbot pages. The "Iris Flower Experience" and "Talk with Judea" are introduced in the relevant chapters.
              
-    You can always access our ChatGPT implementation to deepen your learning or when you feel stuck. Just keep in mind that for ChatGPT, we only allow preset prompts to avoid cheating. Also, LLMs make mistakes, watch out!
+    You can always access our ChatGPT implementation to deepen your learning or when you feel stuck, except from for the final quiz (an API KEY will be provide to you). Just keep in mind that for ChatGPT, we only allow preset prompts to avoid cheating. Also, LLMs make mistakes, watch out!
              
     ### Pages & Chapters
              
