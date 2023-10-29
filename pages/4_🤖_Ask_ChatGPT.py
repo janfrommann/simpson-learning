@@ -22,7 +22,7 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 # Initialize 'user_input' to None to avoid NameError
-user_input = None  # This line is crucial; it initializes 'user_input'
+user_input = None  # crucial; it initializes 'user_input'
 
 # Sidebar for predefined prompts and responses
 with st.sidebar:
@@ -37,10 +37,10 @@ with st.sidebar:
 
     }
 
-    # Loop over the predefined prompts and create buttons for each in the sidebar
+    # Loop over the predefined prompts
     for prompt in prompt_buttons:
         if st.button(prompt):
-            user_input = prompt_buttons[prompt]  # Assigns new value if button is pressed
+            user_input = prompt_buttons[prompt]  # new value if button is pressed
 
     st.header("Responses")
     response_buttons = {
@@ -48,12 +48,11 @@ with st.sidebar:
         "Simplify your answer": "That seems complicated. Can you explain it in simpler terms?"
     }
 
-    # Loop over the response prompts and create buttons for each in the sidebar
+    # Loop over the responses
     for response in response_buttons:
         if st.button(response):
             user_input = response_buttons[response]  # Assigns new value if button is pressed
 
-# Process the user input after checking if it's not None (meaning a button was pressed)
 if user_input:  # This check is safe now as 'user_input' is defined in the scope
     # Add the user's message to the chat history
     st.session_state.messages.append({"role": "user", "content": user_input})

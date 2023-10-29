@@ -11,7 +11,7 @@ def create_plots(sample_sizes):
     data = pd.DataFrame(data=np.c_[iris['data'], iris['target']], columns=iris['feature_names'] + ['target'])
     data['species'] = data['target'].map({0: 'setosa', 1: 'versicolor', 2: 'virginica'})
 
-    # Sample data based on the slider values
+    # Sampleddata
     sampled_data = pd.DataFrame()
     for target, species in enumerate(['setosa', 'versicolor', 'virginica']):
         sampled_data = pd.concat([sampled_data, data[data['species'] == species].sample(sample_sizes[species])])
@@ -40,7 +40,7 @@ def create_plots(sample_sizes):
 
     return fig_total, fig_subcat
 
-# Streamlit app starts here
+# Streamlit app here
 st.title('Iris Flower Data Explorer')
 
 st.write("""
@@ -48,7 +48,7 @@ Explore the Iris Flower dataset with different sample sizes for each species.
 Below you can see two views: The total view with aggregate data and the subcategory (disaggregate) view with data divided by the three Iris species.
 """)
 
-# Slider to select sample sizes
+# Sliders
 st.sidebar.header('Set Sample Sizes')
 sample_sizes = {
     'setosa': st.sidebar.slider('Setosa sample size', 1, 50, 50),
@@ -56,7 +56,7 @@ sample_sizes = {
     'virginica': st.sidebar.slider('Virginica sample size', 1, 50, 50)
 }
 
-# Generate and display the plots based on current settings
+# Generate plots
 fig_total, fig_subcat = create_plots(sample_sizes)
 st.plotly_chart(fig_total)
 st.plotly_chart(fig_subcat)
